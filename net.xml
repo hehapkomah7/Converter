@@ -1,0 +1,210 @@
+<config>
+  <junctions>
+    <junction code="МП" name="Москва" latitude="55.1" longitude="37.9" grid="3.1">
+      <coefficients>
+        <item vehicle="Ж" value="1" />
+        <item vehicle="А" value="1" />
+        <item vehicle="В" value="1" />
+      </coefficients>
+      <capacity>
+        <item vehicle="Ж" value="10000" />
+        <item vehicle="А" value="10" />
+        <item vehicle="В" value="10000000" />
+      </capacity>
+      <loading>
+        <item product="МП" value="1000" />
+        <item product="ЕП" value="-100" />
+        <item product="МУ" value="-200" />
+        <item product="ИП" value="-150" />
+        <item product="ИВ" value="-50" />
+        <item product="ОП" value="-500" />
+      </loading>
+    </junction>
+    <junction code="ЕП" name="Екатеринбург" latitude="56.9" longitude="60.6" grid="4.2">
+      <coefficients>
+        <item vehicle="Ж" value="1" />
+        <item vehicle="А" value="1" />
+        <item vehicle="В" value="1" />
+      </coefficients>
+      <capacity>
+        <item vehicle="Ж" value="1" />
+        <item vehicle="А" value="1" />
+        <item vehicle="В" value="1" />
+      </capacity>
+      <loading>
+        <item product="СП" value="7777" />
+      </loading>
+    </junction>
+    <junction code="СП" name="Санкт-Петербург" latitude="59" longitude="30.5" grid="2.1">
+      <coefficients>
+        <item vehicle="Ж" value="1" />
+        <item vehicle="А" value="1" />
+        <item vehicle="В" value="1" />
+      </coefficients>
+      <capacity>
+        <item vehicle="Ж" value="1" />
+        <item vehicle="А" value="1" />
+        <item vehicle="В" value="1" />
+      </capacity>
+      <loading>
+        <item product="МП" value="-100" />
+        <item product="ЕП" value="-100" />
+        <item product="СП" value="1000" />
+        <item product="МУ" value="-100" />
+        <item product="ИП" value="-300" />
+        <item product="ИВ" value="-200" />
+        <item product="ОП" value="-200" />
+      </loading>
+    </junction>
+    <junction code="МУ" name="Мурманск" latitude="69" longitude="33.3" grid="1.2">
+      <coefficients>
+        <item vehicle="Ж" value="1" />
+        <item vehicle="М" value="1" />
+        <item vehicle="В" value="1" />
+      </coefficients>
+      <capacity>
+        <item vehicle="Ж" value="1" />
+        <item vehicle="М" value="1" />
+        <item vehicle="В" value="1" />
+      </capacity>
+      <loading>
+        <item product="СП" value="-400" />
+        <item product="МУ" value="1000" />
+        <item product="ИП" value="-250" />
+        <item product="ОП" value="-350" />
+      </loading>
+    </junction>
+    <junction code="ИП" name="Индига" latitude="67.7" longitude="49" grid="1.3">
+      <coefficients>
+        <item vehicle="Ж" value="1" />
+        <item vehicle="М" value="1" />
+      </coefficients>
+      <capacity>
+        <item vehicle="Ж" value="1" />
+        <item vehicle="М" value="1" />
+      </capacity>
+      <loading>
+        <item product="МП" value="-50" />
+        <item product="ЕП" value="-100" />
+        <item product="СП" value="-150" />
+        <item product="МУ" value="-200" />
+        <item product="ИП" value="1000" />
+        <item product="ИВ" value="-150" />
+        <item product="ОП" value="-350" />
+      </loading>
+    </junction>
+    <junction code="ИВ" name="Ивдель" latitude="60.69" longitude="60.43" grid="2.3">
+      <coefficients>
+        <item vehicle="Ж" value="1" />
+      </coefficients>
+      <capacity>
+        <item vehicle="Ж" value="1" />
+      </capacity>
+      <loading>
+        <item product="ИП" value="-1000" />
+        <item product="ИВ" value="1000" />
+      </loading>
+    </junction>
+    <junction code="ОП" name="Омск" latitude="54.99" longitude="73.36" grid="4.3">
+      <coefficients>
+        <item vehicle="Ж" value="1" />
+        <item vehicle="А" value="1" />
+        <item vehicle="В" value="1" />
+      </coefficients>
+      <capacity>
+        <item vehicle="Ж" value="1" />
+        <item vehicle="А" value="1" />
+        <item vehicle="В" value="1" />
+      </capacity>
+      <loading>
+        <item product="МП" value="-50" />
+        <item product="ЕП" value="-300" />
+        <item product="СП" value="-250" />
+        <item product="МУ" value="-400" />
+        <item product="ОП" value="1000" />
+      </loading>
+    </junction>
+  </junctions>
+  <shoulders>
+    <shoulder junction1="МС" junction2="СГ" vehicle="Ж" capacity="2000" distance="1000" unit="руб/ткм" tariff="0.4" />
+    <shoulder junction1="МС" junction2="СГ" vehicle="А" capacity="300" distance="1000" unit="руб/ткм" tariff="0.6" />
+    <shoulder junction1="МС" junction2="СГ" vehicle="С" capacity="200" distance="650" unit="руб/ткм" tariff="1" />
+    <shoulder junction1="МС" junction2="ЕГ" vehicle="Ж" capacity="1500" distance="1500" unit="руб/ткм" tariff="0.5" />
+    <shoulder junction1="МС" junction2="ЕГ" vehicle="А" capacity="300" distance="1500" unit="руб/ткм" tariff="0.6" />
+    <shoulder junction1="МС" junction2="ЕГ" vehicle="С" capacity="200" distance="1800" unit="руб/ткм" tariff="0.8" />
+    <shoulder junction1="СГ" junction2="МК" vehicle="Ж" capacity="800" distance="1400" unit="руб/ткм" tariff="0.4" />
+    <shoulder junction1="СГ" junction2="МК" vehicle="С" capacity="15" distance="1000" unit="руб/ткм" tariff="0.6" />
+    <shoulder junction1="МК" junction2="ИД" vehicle="М" capacity="500" distance="1000" unit="руб/ткм" tariff="0.3" />
+    <shoulder junction1="ИД" junction2="ИЛ" vehicle="Ж" capacity="300" distance="800" unit="руб/ткм" tariff="1" />
+    <shoulder junction1="ИД" junction2="СТ" vehicle="М" capacity="500" distance="1000" unit="руб/ткм" tariff="0.8" />
+    <shoulder junction1="ЕГ" junction2="ИЛ" vehicle="Ж" capacity="300" distance="800" unit="руб/ткм" tariff="0.5" />
+    <shoulder junction1="ЕГ" junction2="ОК" vehicle="Ж" capacity="1200" distance="1000" unit="руб/ткм" tariff="0.4" />
+    <shoulder junction1="ЕГ" junction2="ОК" vehicle="А" capacity="400" distance="1000" unit="руб/ткм" tariff="0.5" />
+    <shoulder junction1="ИЛ" junction2="СТ" vehicle="Ж" capacity="200" distance="1200" unit="руб/ткм" tariff="1" />
+    <shoulder junction1="ИЛ" junction2="СР" vehicle="Ж" capacity="200" distance="600" unit="руб/ткм" tariff="1" />
+    <shoulder junction1="СТ" junction2="СР" vehicle="Р" capacity="100" distance="1800" unit="руб/ткм" tariff="0.5" />
+    <shoulder junction1="СТ" junction2="ДК" vehicle="М" capacity="500" distance="800" unit="руб/ткм" tariff="1" />
+    <shoulder junction1="СР" junction2="НК" vehicle="Р" capacity="100" distance="1500" unit="руб/ткм" tariff="0.5" />
+    <shoulder junction1="СР" junction2="ЛК" vehicle="Ж" capacity="200" distance="1000" unit="руб/ткм" tariff="0.8" />
+    <shoulder junction1="СР" junction2="НК" vehicle="С" capacity="20" distance="900" unit="руб/ткм" tariff="0.7" />
+    <shoulder junction1="ОК" junction2="НК" vehicle="Ж" capacity="1500" distance="700" unit="руб/ткм" tariff="0.4" />
+    <shoulder junction1="ОК" junction2="НК" vehicle="А" capacity="400" distance="700" unit="руб/ткм" tariff="0.5" />
+    <shoulder junction1="ОК" junction2="БЛ" vehicle="Ж" capacity="700" distance="1000" unit="руб/ткм" tariff="0.4" />
+    <shoulder junction1="ОК" junction2="БЛ" vehicle="А" capacity="200" distance="1000" unit="руб/ткм" tariff="0.5" />
+    <shoulder junction1="ОК" junction2="НК" vehicle="С" capacity="20" distance="600" unit="руб/ткм" tariff="0.6" />
+    <shoulder junction1="НК" junction2="БЛ" vehicle="Ж" capacity="1000" distance="250" unit="руб/ткм" tariff="0.4" />
+    <shoulder junction1="НК" junction2="БЛ" vehicle="А" capacity="300" distance="250" unit="руб/ткм" tariff="0.5" />
+    <shoulder junction1="НК" junction2="НЦ" vehicle="Ж" capacity="1000" distance="350" unit="руб/ткм" tariff="0.4" />
+    <shoulder junction1="НК" junction2="НЦ" vehicle="А" capacity="300" distance="350" unit="руб/ткм" tariff="0.5" />
+    <shoulder junction1="НК" junction2="КК" vehicle="Ж" capacity="1200" distance="700" unit="руб/ткм" tariff="0.4" />
+    <shoulder junction1="НК" junction2="КК" vehicle="А" capacity="400" distance="750" unit="руб/ткм" tariff="0.5" />
+    <shoulder junction1="НК" junction2="КК" vehicle="С" capacity="15" distance="650" unit="руб/ткм" tariff="0.8" />
+    <shoulder junction1="НК" junction2="БЛ" vehicle="С" capacity="5" distance="250" unit="руб/ткм" tariff="0.7" />
+    <shoulder junction1="НК" junction2="НЦ" vehicle="С" capacity="15" distance="300" unit="руб/ткм" tariff="0.9" />
+    <shoulder junction1="БЛ" junction2="ГК" vehicle="А" capacity="200" distance="500" unit="руб/ткм" tariff="0.6" />
+    <shoulder junction1="БЛ" junction2="НЦ" vehicle="Ж" capacity="400" distance="400" unit="руб/ткм" tariff="0.4" />
+    <shoulder junction1="БЛ" junction2="НЦ" vehicle="А" capacity="200" distance="400" unit="руб/ткм" tariff="0.5" />
+    <shoulder junction1="ГК" junction2="НЦ" vehicle="А" capacity="200" distance="400" unit="руб/ткм" tariff="0.6" />
+    <shoulder junction1="НЦ" junction2="ТШ" vehicle="Ж" capacity="700" distance="1500" unit="руб/ткм" tariff="0.4" />
+    <shoulder junction1="НЦ" junction2="КК" vehicle="С" capacity="20" distance="450" unit="руб/ткм" tariff="0.7" />
+    <shoulder junction1="КК" junction2="ЛК" vehicle="Ж" capacity="400" distance="500" unit="руб/ткм" tariff="0.4" />
+    <shoulder junction1="КК" junction2="ЛК" vehicle="А" capacity="100" distance="400" unit="руб/ткм" tariff="0.5" />
+    <shoulder junction1="КК" junction2="ЛК" vehicle="Р" capacity="100" distance="300" unit="руб/ткм" tariff="0.6" />
+    <shoulder junction1="КК" junction2="ТШ" vehicle="Ж" capacity="1200" distance="500" unit="руб/ткм" tariff="0.4" />
+    <shoulder junction1="КК" junction2="ТШ" vehicle="А" capacity="300" distance="500" unit="руб/ткм" tariff="0.5" />
+    <shoulder junction1="КК" junction2="ЯК" vehicle="С" capacity="5" distance="3500" unit="руб/ткм" tariff="0.9" />
+    <shoulder junction1="КК" junction2="ТШ" vehicle="С" capacity="5" distance="350" unit="руб/ткм" tariff="0.7" />
+    <shoulder junction1="ЛК" junction2="ДК" vehicle="Р" capacity="100" distance="2000" unit="руб/ткм" tariff="0.3" />
+    <shoulder junction1="ДК" junction2="ХГ" vehicle="А" capacity="50" distance="1000" unit="руб/ткм" tariff="1.5" />
+    <shoulder junction1="ДК" junction2="ХГ" vehicle="М" capacity="200" distance="1500" unit="руб/ткм" tariff="1" />
+    <shoulder junction1="ХГ" junction2="ТК" vehicle="М" capacity="200" distance="1500" unit="руб/ткм" tariff="1" />
+    <shoulder junction1="ТШ" junction2="УТ" vehicle="Ж" capacity="500" distance="800" unit="руб/ткм" tariff="0.4" />
+    <shoulder junction1="ТШ" junction2="УТ" vehicle="А" capacity="1000" distance="800" unit="руб/ткм" tariff="0.5" />
+    <shoulder junction1="ТШ" junction2="УЭ" vehicle="Ж" capacity="800" distance="1500" unit="руб/ткм" tariff="0.4" />
+    <shoulder junction1="ТШ" junction2="УЭ" vehicle="А" capacity="200" distance="1500" unit="руб/ткм" tariff="0.5" />
+    <shoulder junction1="ТШ" junction2="УЭ" vehicle="С" capacity="5" distance="800" unit="руб/ткм" tariff="0.7" />
+    <shoulder junction1="УТ" junction2="ЯК" vehicle="Р" capacity="50" distance="1800" unit="руб/ткм" tariff="0.4" />
+    <shoulder junction1="УТ" junction2="ТД" vehicle="Ж" capacity="100" distance="1200" unit="руб/ткм" tariff="0.6" />
+    <shoulder junction1="УЭ" junction2="СН" vehicle="Ж" capacity="1000" distance="1500" unit="руб/ткм" tariff="0.4" />
+    <shoulder junction1="УЭ" junction2="СН" vehicle="А" capacity="100" distance="1500" unit="руб/ткм" tariff="0.5" />
+    <shoulder junction1="УЭ" junction2="СН" vehicle="С" capacity="3" distance="1100" unit="руб/ткм" tariff="0.8" />
+    <shoulder junction1="ЯК" junction2="ТК" vehicle="Р" capacity="50" distance="1800" unit="руб/ткм" tariff="0.6" />
+    <shoulder junction1="ЯК" junction2="ПК" vehicle="А" capacity="50" distance="2000" unit="руб/ткм" tariff="1.2" />
+    <shoulder junction1="ЯК" junction2="ТД" vehicle="Ж" capacity="200" distance="800" unit="руб/ткм" tariff="0.5" />
+    <shoulder junction1="ЯК" junction2="ТД" vehicle="А" capacity="50" distance="800" unit="руб/ткм" tariff="0.6" />
+    <shoulder junction1="ТК" junction2="ПК" vehicle="М" capacity="200" distance="1000" unit="руб/ткм" tariff="1.2" />
+    <shoulder junction1="ПК" junction2="КЧ" vehicle="М" capacity="200" distance="1200" unit="руб/ткм" tariff="1.2" />
+    <shoulder junction1="КЧ" junction2="ВО" vehicle="М" capacity="200" distance="2000" unit="руб/ткм" tariff="1" />
+    <shoulder junction1="КЧ" junction2="ХВ" vehicle="С" capacity="3" distance="1700" unit="руб/ткм" tariff="1" />
+    <shoulder junction1="ТД" junction2="СН" vehicle="Ж" capacity="200" distance="300" unit="руб/ткм" tariff="0.6" />
+    <shoulder junction1="ТД" junction2="СН" vehicle="А" capacity="100" distance="300" unit="руб/ткм" tariff="0.7" />
+    <shoulder junction1="ТД" junction2="КМ" vehicle="Ж" capacity="300" distance="500" unit="руб/ткм" tariff="0.6" />
+    <shoulder junction1="СН" junction2="ХВ" vehicle="Ж" capacity="100" distance="1500" unit="руб/ткм" tariff="0.4" />
+    <shoulder junction1="СН" junction2="ХВ" vehicle="А" capacity="50" distance="1200" unit="руб/ткм" tariff="0.5" />
+    <shoulder junction1="СН" junction2="ХВ" vehicle="С" capacity="3" distance="1000" unit="руб/ткм" tariff="0.8" />
+    <shoulder junction1="ХВ" junction2="КМ" vehicle="Ж" capacity="200" distance="400" unit="руб/ткм" tariff="0.6" />
+    <shoulder junction1="ХВ" junction2="ВК" vehicle="Ж" capacity="1000" distance="800" unit="руб/ткм" tariff="0.4" />
+    <shoulder junction1="ХВ" junction2="ВК" vehicle="С" capacity="5" distance="650" unit="руб/ткм" tariff="0.7" />
+    <shoulder junction1="КМ" junction2="ВО" vehicle="Ж" capacity="500" distance="500" unit="руб/ткм" tariff="0.6" />
+  </shoulders>
+</config>
